@@ -23,9 +23,10 @@ public class EnemyController : MonoBehaviour
         if(Vector2.Distance(this.transform.position, player.transform.position) < 10)
         {
             seeker.StartPath(transform.position, player.transform.position);
+            GetComponent<AIPath>().canMove = true;
         } else
         {
-            seeker.StartPath(transform.position, transform.position);
+            GetComponent<AIPath>().canMove = false;
         }
     }
 
