@@ -426,7 +426,7 @@ MonoBehaviour:
   ShotPrefab: {fileID: 3568930702613251596, guid: 251312338664fff4383945ee6d6b2c01, type: 3}
   playerSpeed: 10
   shotSpeed: 5
-  combatType: Knight
+  combatType: Mage
   knightSprite: {fileID: 21300000, guid: 8941ab8a38580b340aeb8b0ed574cf2f, type: 3}
   archerSprite: {fileID: 0}
   mageSprite: {fileID: 21300000, guid: 836aae34ced31ac49962d99cc11beb8f, type: 3}

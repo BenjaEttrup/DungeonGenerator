@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
 			GetComponent<BoxCollider2D>().size = new Vector2(1.049374f, 2.977896f);
 		} else if(combatType == "Priest")
         {
-			GetComponent<SpriteRenderer>().sprite = priestSprite;
+			//GetComponent<SpriteRenderer>().sprite = priestSprite;
         }
 	}
 
@@ -97,7 +97,16 @@ public class PlayerController : MonoBehaviour
 			}
 		} else if(combatType == "Mage")
 		{
+			if (Input.GetMouseButtonDown(0))
+			{
+				Vector2 shootVector = cam.ScreenToWorldPoint(mousePos) - tr.position;
 
+				GameObject tempShot = Instantiate(ShotPrefab, tr.position, Quaternion.identity);
+
+				tempShot.GetComponent<Rigidbody2D>().velocity = shootVector.normalized * shotSpeed;
+
+				Destroy(tempShot, 20);
+			}
 		} else if(combatType == "Priest")
 		{
 
